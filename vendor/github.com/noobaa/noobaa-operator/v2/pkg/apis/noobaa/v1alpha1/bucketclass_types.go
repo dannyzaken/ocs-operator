@@ -72,11 +72,16 @@ type BucketClassStatus struct {
 	// +patchMergeKey=type
 	// +patchStrategy=merge
 	// +optional
+	// +listType=set
 	Conditions []conditionsv1.Condition `json:"conditions,omitempty"  patchStrategy:"merge" patchMergeKey:"type"`
 
 	// RelatedObjects is a list of objects related to this operator.
 	// +optional
+	// +listType=set
 	RelatedObjects []corev1.ObjectReference `json:"relatedObjects,omitempty"`
+	// Mode is a simple, high-level summary of where the System is in its lifecycle
+	// +optional
+	Mode string `json:"mode,omitempty"`
 }
 
 // PlacementPolicy specifies the placement policy for the bucket class
@@ -94,7 +99,7 @@ type Tier struct {
 	// Placement specifies the type of placement for the tier
 	// If empty it should have a single backing store.
 	// +optional
-	// +kubebuilder:validation:Enum=Spread,Mirror
+	// +kubebuilder:validation:Enum=Spread;Mirror
 	Placement TierPlacement `json:"placement,omitempty"`
 
 	// BackingStores is an unordered list of backing store names.
