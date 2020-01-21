@@ -15,8 +15,8 @@ export REPLACES_CSV_VERSION=${REPLACES_CSV_VERSION:-"0.0.1"}
 
 # Current dependency images our DEV CSV are pinned to
 export ROOK_IMAGE=${ROOK_IMAGE:-"rook/ceph:v1.1.4-27.gf20c056"}
-export NOOBAA_IMAGE=${NOOBAA_IMAGE:-"noobaa/noobaa-operator:2.0.9"}
-export NOOBAA_CORE_IMAGE=${NOOBAA_CORE_IMAGE:-"noobaa/noobaa-core:5.2.11"}
+export NOOBAA_IMAGE=${NOOBAA_IMAGE:-"noobaa/noobaa-operator:2.1.0-master20200101"}
+export NOOBAA_CORE_IMAGE=${NOOBAA_CORE_IMAGE:-"noobaa/noobaa-core:5.3.0-master20200119"}
 export NOOBAA_DB_IMAGE=${NOOBAA_DB_IMAGE:-"centos/mongodb-36-centos7"}
 export CEPH_IMAGE=${CEPH_IMAGE:-"ceph/ceph:v14.2"}
 export OCS_IMAGE=${OCS_IMAGE:-"${IMAGE_REGISTRY}/${REGISTRY_NAMESPACE}/ocs-operator:${IMAGE_TAG}"}
